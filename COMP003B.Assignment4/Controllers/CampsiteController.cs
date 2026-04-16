@@ -36,7 +36,7 @@ public class CampsiteController : Controller
     public IActionResult Details(int id)
     {
         var campsite = _campsites.FirstOrDefault(c => c.Id == id);
-        if (campsite = null)
+        if (campsite == null)
         {
             return NotFound();
         }
