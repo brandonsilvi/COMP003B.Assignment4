@@ -20,4 +20,5 @@ public class Campsite
     
     [Required]
     [Range(1.00, 300.00, ErrorMessage = "Price per night must be between $1.00 and $300.00.")]
+    public decimal PricePerNight { get; set; }
 }
