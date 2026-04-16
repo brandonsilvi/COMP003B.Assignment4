@@ -25,6 +25,12 @@ public class Program
         app.UseAuthorization();
 
         app.MapStaticAssets();
+
+        app.MapControllerRoute(
+            name: "campsite",
+            pattern: "Campsite/Details/{id:int}",
+            defaults: new { controller = "Campsite", action = "Details" });
+        
         app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
