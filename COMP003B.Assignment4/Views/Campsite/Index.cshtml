@@ -1,0 +1,14 @@
+@model IEnumerable<COMP003B.Assignment4.Models.Campsite>
+
+@{
+    ViewData["Title"] = "Campsites";
+}
+
+<h2>Available Campsites</h2>
+<p>Check out our campsites and find out the date of your next getaway!</p>
+
+<partial name="_NavMenu" />
+@foreach (var campsite in Model)
+{
+    <partial name="_CampsiteCard" model="campsite" />
+}
