@@ -1,2 +1,12 @@
-@model TModel
+@model COMP003B.Assignment4.Models.Campsite
 
+<div class="card mb-3">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Name</h4>
+        <p class="card-text">@Model.Location</p>
+        <p class="card-text">Max Occupancy: @Model.MaxOccupancy</p>
+        <p class="card-text">$@Model.PricePerNight per night</p>
+        <a asp-controller="Campsite" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-outline-secondary">View Details</a>
+        <a asp-controller="Campsite" asp-action="Book" asp-route-id="@Model.Id" class="btn btn-outline-success">Book Now</a>
+    </div>
+</div>
