@@ -19,6 +19,7 @@ public class Program
             app.UseHsts();
         }
 
+        app.UseMiddleware<COMP003B.Assignment4.Middleware.RequestLoggingMiddleware>();
         app.UseHttpsRedirection();
         app.UseRouting();
 

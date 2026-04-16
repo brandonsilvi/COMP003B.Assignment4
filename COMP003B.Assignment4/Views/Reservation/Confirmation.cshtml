@@ -1,0 +1,24 @@
+ @model COMP003B.Assignment4.Models.Reservation
+ 
+ @{
+     ViewData["Title"] = "Reservation Confirmed";
+ }
+ 
+ <h2>Reservation Confirmed!!!!!</h2>
+ <p>Thank you for your reservation, here are your details for your next adventure:</p>
+
+ <partial name="_NavMenu" />
+ 
+ <div class="card mb-3">
+     <div class="card-body">
+         <h4 class="card-title">Booking Summary</h4>
+         <p class="card-text">Campsite: @Model.CampsiteCode</p>
+         <p class="card-text">Guest Name: @Model.GuestName</p>
+         <p class="card-text">Email: @Model.Email</p>
+         <p class="card-text">Arrival Date: @Model.ArrivalDate.ToShortDateString()</p>
+         <p class="card-text">Nights: @Model.Nights</p>
+         <p class="card-text">Guests: @Model.Guests</p>
+         <a asp-controller="Campsite" asp-action="Index" class="btn btn-outline-secondary">Back to Campsites</a>
+         <a asp-controller="Reservation" asp-action="Book" class="btn btn-success">Make Another Reservation</a>
+     </div>
+ </div>
