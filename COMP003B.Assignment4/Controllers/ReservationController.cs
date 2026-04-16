@@ -22,14 +22,15 @@ public class ReservationController : Controller
         return View("Book", new Reservation());
     }
     //Post reservation/book
-    [HttpPost("reservation/book")]
-    public IActionResult book(Reservation model)
+    [HttpPost]
+    public IActionResult Book(Reservation model)
     {
+        
         if (!ModelState.IsValid)
         {
             return View("Book", model);
         }
-
+        
         return RedirectToAction("Confirmation", model);
     }
     //Get reserv confirm

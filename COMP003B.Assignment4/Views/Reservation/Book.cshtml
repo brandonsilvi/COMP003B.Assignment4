@@ -9,34 +9,35 @@
 <partial name="_NavMenu" />
 
 <form asp-action="Book" method="post">
+    <input asp-for="CampsiteCode" type="hidden" />
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    
+
     <div class="mb-3">
         <label asp-for="GuestName" class="form-label"></label>
-        <input asp-for="GuestName" class="form-control" />
+        <input asp-for="GuestName" class="form-control"/>
         <span asp-validation-for="GuestName" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Email" class="form-label"></label>
-        <input asp-for="Email" class="form-control" />
+        <input asp-for="Email" class="form-control"/>
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="ArrivalDate" class="form-label"></label>
-        <input asp-for="ArrivalDate" class="form-control" />
+        <input asp-for="ArrivalDate" type="date" class="form-control"/>
         <span asp-validation-for="ArrivalDate" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Nights" class="form-label"></label>
-        <input asp-for="Nights" class="form-control" />
+        <input asp-for="Nights" type="number" class="form-control"/>
         <span asp-validation-for="Nights" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Guests" class="form-label"></label>
-        <input asp-for="Guests" class="form-control" />
+        <input asp-for="Guests" type="number" class="form-control"/>
         <span asp-validation-for="Guests" class="text-danger"></span>
     </div>
-    
+
     <button type="submit" class="btn btn-success">Book Now</button>
     <a asp-controller="Campsite" asp-action="Index" class="btn btn-outline-secondary"></a>
 </form>
